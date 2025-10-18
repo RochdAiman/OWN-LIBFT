@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arochd <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/14 21:06:16 by arochd            #+#    #+#             */
-/*   Updated: 2025/10/14 21:29:53 by arochd           ###   ########.fr       */
+/*   Created: 2025/10/17 20:54:29 by arochd            #+#    #+#             */
+/*   Updated: 2025/10/18 10:02:29 by arochd           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-int	ft_isascii(int c)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	size_t	i;
+	size_t	j;
+
+	if (!big || !little)
+		return (NULL);
+	if (*little == '\0')
+		return ((char *)big);
+	i = 0;
+	while (i < len && big[i])
+	{
+		j = 0;
+		while (i + j < len && little[j] && big[i + j] == little[j])
+			j++;
+		if (!little[j])
+			return ((char *)big + i);
+		i++;
+	}
+	return (NULL);
 }
-// #include<stdio.h>
-// int main()
-// {
-//     printf("%d\n", ft_isascii('%'));
-//     printf("%d\n", ft_isascii('0'));
-//     printf("%d\n", ft_isascii(128));
-//     printf("%d\n", ft_isascii(144));
-//     printf("%d\n", ft_isascii(1));
-//     return (0);
-// }

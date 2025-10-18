@@ -14,9 +14,10 @@
 
 int	ft_isprint(int c)
 {
-	if (c >= 33 && c <= 126)
-		return (0);
-	return (1);
+	unsigned char	uc;
+
+	uc = (unsigned char)c;
+	return (uc >= 32 && uc <= 126);
 }
 // #include<stdio.h>
 // int main()

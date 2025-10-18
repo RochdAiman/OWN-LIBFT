@@ -6,21 +6,22 @@
 /*   By: arochd <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 12:55:56 by arochd            #+#    #+#             */
-/*   Updated: 2025/10/17 12:55:59 by arochd           ###   ########.fr       */
+/*   Updated: 2025/10/17 15:59:59 by arochd           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t  ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
-    size_t  len;
-    if (!str)
-        return (0);
-    len = 0;
-    while (str[len])
-        len++;
-    return (len);
+	size_t	len;
+
+	if (!str)
+		return (0);
+	len = 0;
+	while (str[len])
+		len++;
+	return (len);
 }
 // #include<stdio.h>
 // int main()

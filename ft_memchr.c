@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arochd <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/14 21:06:16 by arochd            #+#    #+#             */
-/*   Updated: 2025/10/14 21:29:53 by arochd           ###   ########.fr       */
+/*   Created: 2025/10/17 18:50:40 by arochd            #+#    #+#             */
+/*   Updated: 2025/10/17 19:21:56 by arochd           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-int	ft_isascii(int c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	size_t					i;
+	const unsigned char		*mb;
+	unsigned char			cc;
+
+	if (!s)
+		return (NULL);
+	cc = (unsigned char)c;
+	mb = (const unsigned char *)s;
+	i = 0;
+	while (i < n)
+	{
+		if (mb[i] == cc)
+			return ((void *)mb + i);
+		i++;
+	}
+	return (NULL);
 }
-// #include<stdio.h>
-// int main()
-// {
-//     printf("%d\n", ft_isascii('%'));
-//     printf("%d\n", ft_isascii('0'));
-//     printf("%d\n", ft_isascii(128));
-//     printf("%d\n", ft_isascii(144));
-//     printf("%d\n", ft_isascii(1));
-//     return (0);
-// }
