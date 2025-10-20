@@ -1,35 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arochd <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/18 10:04:14 by arochd            #+#    #+#             */
-/*   Updated: 2025/10/18 11:02:38 by arochd           ###   ########.fr       */
+/*   Created: 2025/10/20 21:58:34 by arochd            #+#    #+#             */
+/*   Updated: 2025/10/20 21:58:37 by arochd           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int		i;
-	int		sign;
-	long	result;
-
-	sign = 1;
-	result = 0;
-	i = 0;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
-		i++;
-	if (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
-			sign = -1;
-		i++;
-	}
-	while (str[i] >= '0' && str[i] <= '9')
-		result = result * 10 + (str[i++] - '0');
-	return ((int)result * sign);
-}	
+    
+}
