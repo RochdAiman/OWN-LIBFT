@@ -17,8 +17,6 @@ void	*ft_memset(void *s, int c, size_t n)
 	size_t			i;
 	unsigned char	*buff;
 
-	if (!s ||!n)
-		return (NULL);
 	buff = (unsigned char *)s;
 	i = 0;
 	while (i < n)
@@ -28,24 +26,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-// #include<stdio.h>
-// int main()
-// {
-// 	// const char *ro = "hello";
-// 	// ft_memset((void *)ro, 'A', 5); // Trying to write to string literal
-// 	// char test[10];
-// 	// ft_memset(test, 128, 10);
-// 	// printf(" %s\n", test);
-// 	// char buff[1];
-// 	// ft_memset(buff, 'A', 10);
-// 	return (0);
-// }
-// #include<stdio.h>
-// #include<string.h>
-// int main()
-// {
-// 	char a[10];
-// 	ft_memset(a, 'A', 10);
-// 	//memset(a, 'A', 10);
-// 	return 0;
-// }

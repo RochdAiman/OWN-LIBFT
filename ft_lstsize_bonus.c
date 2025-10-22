@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: arochd <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 20:54:29 by arochd            #+#    #+#             */
-/*   Updated: 2025/10/18 10:02:29 by arochd           ###   ########.fr       */
+/*   Created: 2025/10/22 00:18:55 by arochd            #+#    #+#             */
+/*   Updated: 2025/10/22 00:18:56 by arochd           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+int	ft_lstsize(t_list *lst)
 {
-	size_t	i;
-	size_t	j;
+	int	count;
 
-	if (!big && !little)
-		return (NULL);
-	if (*little == '\0')
-		return ((char *)big);
-	i = 0;
-	while (i < len && big[i])
+	count = 0;
+	while (lst)
 	{
-		j = 0;
-		while (i + j < len && little[j] && big[i + j] == little[j])
-			j++;
-		if (!little[j])
-			return ((char *)big + i);
-		i++;
+		count++;
+		lst = lst->next;
 	}
-	return (NULL);
+	return (count);
 }

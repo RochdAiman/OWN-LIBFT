@@ -19,8 +19,6 @@ void	ft_bzero(void *s, size_t n)
 
 	i = 0;
 	buff = (unsigned char *)s;
-	if (!s && n > 0)
-		return ;
 	while (i < n)
 	{
 		buff[i] = '\0';
