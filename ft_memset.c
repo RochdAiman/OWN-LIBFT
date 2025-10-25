@@ -26,3 +26,15 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
+#include<stdio.h>
+int main()
+{
+	int i = 10;
+	int j = 20;
+	int tmp;
+	ft_memset(&tmp, i, 1);
+	ft_memset(&i, j, 1);
+	ft_memset(&j, tmp, 1);
+	printf("the value of i = %d\n", i);
+	printf("the value of j = %d\n", j);
+}

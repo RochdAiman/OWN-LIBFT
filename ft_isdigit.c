@@ -13,17 +13,5 @@
 
 int	ft_isdigit(int c)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	return (c >= '0' && c <= '9');
 }
-// #include<stdio.h>
-// int main()
-// {
-//     printf("%d\n", ft_isdigit(0));
-//     printf("%d\n", ft_isdigit('4'));
-//     printf("%d\n", ft_isdigit('p'));
-//     printf("%d\n", ft_isdigit(22));
-//     printf("%d\n", ft_isdigit(-1));
-//     return (0);
-// }

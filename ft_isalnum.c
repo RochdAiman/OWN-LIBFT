@@ -14,18 +14,5 @@
 
 int	ft_isalnum(int c)
 {
-	if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z')
-		|| (c >= 'a' && c <= 'z'))
-		return (1);
-	return (0);
+	return (ft_isalpha(c) || ft_isdigit(c));
 }
-// #include<stdio.h>
-// int main()
-// {
-//     printf("%d\n", ft_isalnum('4'));
-//     printf("%d\n", ft_isalnum('@'));
-//     printf("%d\n", ft_isalnum(0));
-//     printf("%d\n",ft_isalnum('Z'));
-//     printf("%d\n",ft_isalnum('a'));
-//     return (0);
-// }

@@ -15,8 +15,8 @@
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t				i;
-	unsigned char		*destination;
-	const unsigned char	*source;
+	char		*destination;
+	const char	*source;
 
 	i = 0;
 	if ((!dest && !src) && n > 0)
@@ -32,25 +32,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-//#include<stdio.h>
-//int main()
-//{
-	// char buff1[] = "NAPOLI";
-	// char buff2[7];
-	// ft_memcpy(buff2, buff1, 7);
-	// printf("%s", buff2);
-	// int src[] = {1, 2, 3, 4, 5};
-	// int dst[5];
-	// ft_memcpy(dst, src, sizeof(src));
-	// int i = 0;
-	// while (i < 5)
-	// {
-	// 	printf("%d\n", dst[i]);
-	// 	i++;
-	// }
-	// char *src = NULL;
-//	char *dst = "hh";
-//	ft_memcpy(dst, NULL, 2);
-//
-//	return(0);
-//}

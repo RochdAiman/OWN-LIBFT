@@ -1,26 +1,48 @@
 #include "libft.h"
 #include<stdio.h>
+#include <ctype.h>
+#include <string.h>
 
-void    print_content(void *content)
-{
-    printf("%s\n", (char *)content);
-}
+// typedef struct s_point {
+// 	int x;
+// 	int y;
+// 	char name[10];
+// } t_point;
 
+// int main(void)
+// {
+// 	t_point p = {1337, 42, "PointA"};
+// 	ft_memset(&p, 0, sizeof(p));
+// 	printf("After memset: x=%d, y=%d, name=%s\n", p.x, p.y, p.name);
+
+// }
+// int main(void)
+// {
+// 	char *mem;
+//     mem = malloc(10);
+//     mem = "HELLO";
+// 	ft_memset(mem, 'A', 10);
+// 	write(1, mem, 10);
+// 	free(mem);
+// }
+// int main() {
+//     char src[] = "Hello, World!";
+//     char dest[20];
+
+//     ft_memmove(dest, src, strlen(src) + 1);
+//     printf("Non-overlap: %s\n", dest); // Expect: Hello, World!
+//     return 0;
+// }
 int main()
 {
-    t_list    *node1 = ft_lstnew(ft_strdup("first"));
-    t_list    *node2 = ft_lstnew(ft_strdup("secoond"));
-    t_list    *node3 = ft_lstnew(ft_strdup("third"));
+    int tab[4] = {1, 2, 3, 4};
+    int i =3;
+    rl_red = 0;
 
-    node1->next = node2;
-    node2->next = node3;
 
-    t_list *head = node1;
-    
-    printf("Testing ft_lstiter:\n");
-    ft_lstiter(head, print_content);
 
-    ft_lstclear(&head, free);
 
-	return(0);
+
+
+    return 0;
 }

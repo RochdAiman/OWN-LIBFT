@@ -10,13 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft.h"e
+
+static	int	over_flow(int sign)
+{
+	if (sign == -1)
+		return (0);
+	return (-1);
+}
 
 int	ft_atoi(const char *str)
 {
 	int		i;
 	int		sign;
 	long	result;
+	long	of;
 
 	sign = 1;
 	result = 0;
@@ -30,6 +38,11 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
+	{
+		of = result * 10 + (str[i] - '0');
+		if (of < result)
+			return (over_flow(sign));
 		result = result * 10 + (str[i++] - '0');
+	}
 	return ((int)result * sign);
 }	
